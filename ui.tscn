@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://v62ps24knnrt"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_2s1bv"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_2s1bv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -130.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.666667, 1)
