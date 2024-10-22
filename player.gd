@@ -5,63 +5,58 @@ const SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const TURN_SPEED = 0.05
 
+var time_since_last_shot = 0.0
+var fire_rate = 1.0
+
 func _ready() -> void:
+	add_to_group("player")
 	$AnimatedSpriteControl/AnimatedSprite2D.animation_finished.connect(on_AnimatedSprite2D_animation_finished)
+	$AnimatedSpriteControl/AnimatedSprite2D.play(Global.current_weapon + "_idle")
 
 func _process(delta: float) -> void:
 	
-	# When user presses space, fire weapon
-	if Input.is_action_just_pressed("ui_select"):
+	# Fire rate logic
+	time_since_last_shot += delta
+	var can_shoot = time_since_last_shot >= (1.0 / fire_rate)
+	
+	# Switch to Knife when out of ammo
+	if Global.current_weapon != "knife" and Global.gun_ammo <= 0:
+		Global.current_weapon = "knife"
+		$AnimatedSpriteControl/AnimatedSprite2D.play("knife_idle")
+	
+	# When user presses space, and cool down is over, fire weapon
+	if Input.is_action_pressed("ui_select") and can_shoot:
 		if Global.current_weapon == "knife":
 			$AnimatedSpriteControl/AnimatedSprite2D.play("knife_stab")
+		else:
+			$AnimatedSpriteControl/AnimatedSprite2D.play(Global.current_weapon + "_shoot")
 		
-		# GUN
-		elif Global.current_weapon == "gun":
+		time_since_last_shot = 0
+		
+		if Global.current_weapon != "knife":
+			# Expend ammo
 			if Global.gun_ammo > 0:
-				$AnimatedSpriteControl/AnimatedSprite2D.play("gun_shoot")
 				Global.gun_ammo -= 1
-				print("Ammo left:", Global.gun_ammo)
-			else:
-				Global.current_weapon = "knife"
-				$AnimatedSpriteControl/AnimatedSprite2D.play("knife_idle")
-				
-		# MACHINE GUN
-		elif Global.current_weapon == "machinegun":
-			if Global.machinegun_ammo > 0:
-				$AnimatedSpriteControl/AnimatedSprite2D.play("machinegun_shoot")
-				Global.machinegun_ammo -= 1
-				print("Ammo left:", Global.machinegun_ammo)
-			else:
-				if Global.gun_ammo > 0:
-					Global.current_weapon = "gun"
-					$AnimatedSpriteControl/AnimatedSprite2D.play("gun_idle")
-				else:
-					Global.current_weapon = "knife"
-					$AnimatedSpriteControl/AnimatedSprite2D.play("knife_idle")
+			print("Ammo left:", Global.gun_ammo)
 		
-		# MINIGUN
-		elif Global.current_weapon == "minigun":
-			if Global.minigun_ammo > 0:
-				$AnimatedSpriteControl/AnimatedSprite2D.play("minigun_shoot")
-				Global.minigun_ammo -= 1
-				print("Ammo left:", Global.minigun_ammo)
-			else:
-				if Global.machinegun_ammo > 0:
-					Global.current_weapon = "machinegun"
-					$AnimatedSpriteControl/AnimatedSprite2D.play("machinegun_idle")
-				elif Global.gun_ammo > 0:
-					Global.current_weapon = "gun"
-					$AnimatedSpriteControl/AnimatedSprite2D.play("gun_idle")
-				else:
-					Global.current_weapon = "knife"
-					$AnimatedSpriteControl/AnimatedSprite2D.play("knife_idle")
+		# Set fire_rate based on current weapon
+		match Global.current_weapon:
+			"gun":
+				fire_rate = 3.0
+			"machinegun":
+				fire_rate = 6.0
+			"minigun":
+				fire_rate = 10.0
+			"knife":
+				fire_rate = 2.0
+			_:
+				fire_rate = 1.0
+
 					
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -85,11 +80,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func on_AnimatedSprite2D_animation_finished() -> void:
-	if Global.current_weapon == "knife":
-		$AnimatedSpriteControl/AnimatedSprite2D.play("knife_idle")
-	elif Global.current_weapon == "gun":
-		$AnimatedSpriteControl/AnimatedSprite2D.play("gun_idle")
-	elif Global.current_weapon == "machinegun":
-		$AnimatedSpriteControl/AnimatedSprite2D.play("machinegun_idle")
-	elif Global.current_weapon == "minigun":
-		$AnimatedSpriteControl/AnimatedSprite2D.play("minigun_idle")
+	$AnimatedSpriteControl/AnimatedSprite2D.play(Global.current_weapon + "_idle")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=50 format=3 uid="uid://l4hi2ovxfgli"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_e3ovh"]
 [ext_resource type="Texture2D" uid="uid://bgxcckmtgf78d" path="res://assets/grey stone wall.png" id="1_umtm2"]
 [ext_resource type="PackedScene" uid="uid://ddwshjg1sgvht" path="res://player.tscn" id="1_yaceh"]
 [ext_resource type="PackedScene" uid="uid://v62ps24knnrt" path="res://ui.tscn" id="3_ihxrv"]
+[ext_resource type="PackedScene" uid="uid://dw628doptuwhs" path="res://guard.tscn" id="4_4s17t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_78wi2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -231,7 +231,6 @@ uv1_world_triplanar = true
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="world" type="Node3D"]
-script = ExtResource("1_e3ovh")
 
 [node name="Green Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -242,7 +241,7 @@ grow_vertical = 2
 color = Color(0, 0.219608, 0.219608, 1)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
@@ -501,7 +500,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.937, 0, 15.69)
 [node name="3DViewportBorders" type="Node" parent="."]
 
 [node name="LeftBorder" type="ColorRect" parent="3DViewportBorders"]
-anchors_preset = -1
+anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = 10.0
 offset_top = 10.0
@@ -519,7 +518,7 @@ offset_bottom = 15.0
 color = Color(0, 0, 0, 1)
 
 [node name="RightBorder" type="ColorRect" parent="3DViewportBorders"]
-anchors_preset = -1
+anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -530,7 +529,7 @@ offset_bottom = -150.0
 color = Color(0, 0.439216, 0.439216, 1)
 
 [node name="BottomBorder" type="ColorRect" parent="3DViewportBorders"]
-anchors_preset = -1
+anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -539,3 +538,15 @@ offset_top = -150.0
 offset_right = -10.0
 offset_bottom = -145.0
 color = Color(0, 0.439216, 0.439216, 1)
+
+[node name="guard" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.77087, -0.0396023, 6.92312)
+
+[node name="guard2" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4614, -0.0396023, 6.20071)
+
+[node name="guard3" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.95367, -0.0396035, 23.89)
+
+[node name="guard4" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.822, -0.0396023, 22.8329)

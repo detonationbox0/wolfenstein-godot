@@ -1,9 +1,7 @@
 extends Node
 
-var gun_ammo = 10
-var machinegun_ammo = 10
-var minigun_ammo = 10
-var current_weapon = "minigun"
+var gun_ammo = 100
+var current_weapon = "machinegun"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,5 +9,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
