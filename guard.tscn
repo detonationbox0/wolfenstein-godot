@@ -93,7 +93,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8j1qk")
 }],
-"loop": true,
+"loop": false,
 "name": &"shoot",
 "speed": 5.0
 }]
@@ -101,6 +101,8 @@ animations = [{
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y4yip"]
 
 [node name="guard" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_17n56")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
@@ -112,3 +114,8 @@ autoplay = "default"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_y4yip")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52104, 0)
+target_position = Vector3(0, 0, -20)
+collision_mask = 3

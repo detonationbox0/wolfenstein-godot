@@ -1,10 +1,14 @@
 extends CanvasLayer
 
+@onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
-				
+	update_player_health()
+
+func update_player_health():
+	$health.text = str(player.player_health) + "%"

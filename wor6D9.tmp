@@ -539,8 +539,17 @@ offset_right = -10.0
 offset_bottom = -145.0
 color = Color(0, 0.439216, 0.439216, 1)
 
+[node name="guard" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.77087, -0.0396023, 6.92312)
+
 [node name="guard2" parent="." instance=ExtResource("4_4s17t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4614, -0.0396023, 6.20071)
+
+[node name="guard3" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.95367, -0.0396035, 23.89)
+
+[node name="guard4" parent="." instance=ExtResource("4_4s17t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.822, -0.0396023, 22.8329)
 
 [node name="guard5" parent="." instance=ExtResource("4_4s17t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.0339, -0.0396023, -4.79543)

@@ -7,6 +7,11 @@ const TURN_SPEED = 0.05
 
 var time_since_last_shot = 0.0
 var fire_rate = 1.0
+var can_shoot = true
+
+@onready var ray = $Camera3D/RayCast3D
+
+var player_health = 100
 
 func _ready() -> void:
 	add_to_group("player")
@@ -17,7 +22,7 @@ func _process(delta: float) -> void:
 	
 	# Fire rate logic
 	time_since_last_shot += delta
-	var can_shoot = time_since_last_shot >= (1.0 / fire_rate)
+	can_shoot = time_since_last_shot >= (1.0 / fire_rate)
 	
 	# Switch to Knife when out of ammo
 	if Global.current_weapon != "knife" and Global.gun_ammo <= 0:
@@ -51,8 +56,8 @@ func _process(delta: float) -> void:
 				fire_rate = 2.0
 			_:
 				fire_rate = 1.0
+		shoot()
 
-					
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -81,3 +86,13 @@ func _physics_process(delta: float) -> void:
 
 func on_AnimatedSprite2D_animation_finished() -> void:
 	$AnimatedSpriteControl/AnimatedSprite2D.play(Global.current_weapon + "_idle")
+	
+func shoot() -> void:
+	if ray.is_colliding() && ray.get_collider().has_method("die"):
+		ray.get_collider().die()
+		
+func damage() -> void:
+	print("DAMAGED!", player_health)
+	player_health -= 10
+	if player_health <= 0:
+		queue_free()

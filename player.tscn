@@ -157,6 +157,7 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody3D"]
+collision_mask = 3
 script = ExtResource("1_2lxis")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -169,6 +170,10 @@ shape = SubResource("ConvexPolygonShape3D_5u42e")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35846, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -20)
+collision_mask = 3
 
 [node name="AnimatedSpriteControl" type="Control" parent="."]
 layout_mode = 3
