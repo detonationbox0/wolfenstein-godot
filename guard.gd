@@ -33,7 +33,10 @@ func _physics_process(delta: float) -> void:
 	look_at(player.global_position)
 	move_and_slide()
 	attack()
-	
+
+## This function handles the guard's attack logic.
+## It checks the distance to the player and plays the appropriate animation.
+## If the guard is within range, it will attack the player.
 func attack() -> void:
 	
 	var dist_to_player = global_position.distance_to(player.global_position)
@@ -45,7 +48,6 @@ func attack() -> void:
 		$AnimatedSprite3D.play("shoot")
 			
 	if ray.is_colliding() and ray.get_collider().has_method("damage"):
-		print("DAMAGING...")
 		ray.get_collider().damage()
 		
 	await $AnimatedSprite3D.animation_finished

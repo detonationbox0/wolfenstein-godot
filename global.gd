@@ -1,7 +1,8 @@
 extends Node
 
 var gun_ammo = 100
-var current_weapon = "machinegun"
+var current_weapon = "minigun"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

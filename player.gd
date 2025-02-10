@@ -56,18 +56,18 @@ func _process(delta: float) -> void:
 				fire_rate = 2.0
 			_:
 				fire_rate = 1.0
+
 		shoot()
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+
+	# Add the user's gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("Left", "Right", "Forward", "Backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
 
 	if direction:
 		velocity.x = direction.x * SPEED

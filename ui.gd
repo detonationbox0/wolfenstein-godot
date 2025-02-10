@@ -11,4 +11,8 @@ func _process(_delta: float) -> void:
 	update_player_health()
 
 func update_player_health():
+	if player == null:
+		# Should probably display a Game Over message here.
+		$health.text = "He's dead, Jim."
+		return
 	$health.text = str(player.player_health) + "%"
