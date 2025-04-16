@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://v62ps24knnrt"]
+[gd_scene load_steps=28 format=3 uid="uid://v62ps24knnrt"]
 
-[ext_resource type="Script" path="res://ui.gd" id="1_2s1bv"]
+[ext_resource type="Script" uid="uid://3nanknhdlgwd" path="res://ui.gd" id="1_2s1bv"]
 [ext_resource type="FontFile" uid="uid://cb77g86ka7mfg" path="res://assets/Hardpixel-nn51.otf" id="2_gokrl"]
+[ext_resource type="Texture2D" uid="uid://cexyj2f1n4oy0" path="res://assets/bjface.png" id="3_27fn8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ag2i"]
 font = ExtResource("2_gokrl")
@@ -12,19 +13,194 @@ font = ExtResource("2_gokrl")
 font_size = 36
 font_color = Color(0.647059, 0.65098, 1, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nltto"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibotj"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ude"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(576, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_waa4j"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(608, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok7cu"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(640, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irxef"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2l4f"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5rqp"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(544, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs482"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxd00"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etlur"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rqds"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvb2n"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os5c7"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2p7n"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkygq"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sosvr"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndy3v"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2s2p"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8jk5"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cka8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nltto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibotj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5ude")
+}],
+"loop": true,
+"name": &"100",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4yjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waa4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok7cu")
+}],
+"loop": true,
+"name": &"15",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irxef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2l4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5rqp")
+}],
+"loop": true,
+"name": &"30",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs482")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxd00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etlur")
+}],
+"loop": true,
+"name": &"45",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rqds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvb2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os5c7")
+}],
+"loop": true,
+"name": &"60",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2p7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkygq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sosvr")
+}],
+"loop": true,
+"name": &"75",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndy3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2s2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8jk5")
+}],
+"loop": true,
+"name": &"90",
+"speed": 3.0
+}]
+
 [node name="ui" type="CanvasLayer"]
 script = ExtResource("1_2s1bv")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -150.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0, 0, 0, 1)
+metadata/_edit_vertical_guides_ = [576.0]
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 anchors_preset = 12
@@ -36,14 +212,29 @@ offset_top = -130.0
 offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 color = Color(0, 0, 0.666667, 1)
 
+[node name="HeadBackground" type="ColorRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 517.0
+offset_top = -128.0
+offset_right = -521.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.286275, 0.286275, 0.286275, 1)
+
 [node name="health" type="Label" parent="."]
-offset_left = 680.0
+offset_left = 657.0
 offset_top = 553.0
-offset_right = 807.0
+offset_right = 784.0
 offset_bottom = 629.0
+size_flags_horizontal = 4
+text = "100%"
 label_settings = SubResource("LabelSettings_5ag2i")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -54,10 +245,449 @@ anchor_left = 0.569
 anchor_top = 0.802
 anchor_right = 0.71
 anchor_bottom = 0.984
-offset_left = 5.51196
-offset_top = 3.30396
-offset_right = -2.92004
+offset_left = -16.488
+offset_top = 3.30402
+offset_right = -24.92
 offset_bottom = -65.632
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 text = "HEALTH"
 label_settings = SubResource("LabelSettings_01xho")
 horizontal_alignment = 1
+
+[node name="lives" type="Label" parent="."]
+offset_left = 390.0
+offset_top = 553.0
+offset_right = 517.0
+offset_bottom = 629.0
+size_flags_horizontal = 4
+text = "3"
+label_settings = SubResource("LabelSettings_5ag2i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lives_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.569
+anchor_top = 0.802
+anchor_right = 0.71
+anchor_bottom = 0.984
+offset_left = -276.488
+offset_top = 3.30402
+offset_right = -284.92
+offset_bottom = -65.632
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "LIVES"
+label_settings = SubResource("LabelSettings_01xho")
+horizontal_alignment = 1
+
+[node name="ammo" type="Label" parent="."]
+offset_left = 805.0
+offset_top = 553.0
+offset_right = 932.0
+offset_bottom = 629.0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "102"
+label_settings = SubResource("LabelSettings_5ag2i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ammo_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.569
+anchor_top = 0.802
+anchor_right = 0.71
+anchor_bottom = 0.984
+offset_left = 135.512
+offset_top = 3.30402
+offset_right = 127.08
+offset_bottom = -65.632
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "AMMO"
+label_settings = SubResource("LabelSettings_01xho")
+horizontal_alignment = 1
+
+[node name="score" type="Label" parent="."]
+offset_left = 255.0
+offset_top = 553.0
+offset_right = 382.0
+offset_bottom = 629.0
+size_flags_horizontal = 4
+text = "100"
+label_settings = SubResource("LabelSettings_5ag2i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="score_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.569
+anchor_top = 0.802
+anchor_right = 0.71
+anchor_bottom = 0.984
+offset_left = -448.488
+offset_top = 3.30402
+offset_right = -456.92
+offset_bottom = -65.632
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "SCORE"
+label_settings = SubResource("LabelSettings_01xho")
+horizontal_alignment = 1
+
+[node name="floor" type="Label" parent="."]
+offset_left = 33.0
+offset_top = 553.0
+offset_right = 160.0
+offset_bottom = 629.0
+size_flags_horizontal = 4
+text = "1"
+label_settings = SubResource("LabelSettings_5ag2i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="floor_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.569
+anchor_top = 0.802
+anchor_right = 0.71
+anchor_bottom = 0.984
+offset_left = -637.488
+offset_top = 3.30402
+offset_right = -645.92
+offset_bottom = -65.632
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "FLOOR"
+label_settings = SubResource("LabelSettings_01xho")
+horizontal_alignment = 1
+
+[node name="bj" type="AnimatedSprite2D" parent="."]
+position = Vector2(575, 580)
+scale = Vector2(3.53125, 3.53125)
+sprite_frames = SubResource("SpriteFrames_cka8k")
+animation = &"15"
+autoplay = "100"
+
+[node name="HUD Borders" type="Node2D" parent="."]
+
+[node name="TopBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 10.0
+offset_top = 517.0
+offset_right = 1142.0
+offset_bottom = 519.0
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="LeftBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 10.0
+offset_top = 518.0
+offset_right = 12.0
+offset_bottom = 636.0
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="RightBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 1140.0
+offset_top = 518.0
+offset_right = 1142.0
+offset_bottom = 636.0
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="GunTopBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 982.0
+offset_top = 520.0
+offset_right = 1140.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="GunTopShine" type="ColorRect" parent="HUD Borders"]
+offset_left = 959.0
+offset_top = 520.0
+offset_right = 982.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="GunLeftBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 959.0
+offset_top = 520.0
+offset_right = 961.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="GunTopShine2" type="ColorRect" parent="HUD Borders"]
+offset_left = 959.0
+offset_top = 520.0
+offset_right = 961.0
+offset_bottom = 530.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="Divider" type="ColorRect" parent="HUD Borders"]
+offset_left = 957.0
+offset_top = 520.0
+offset_right = 959.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="DividerTopBoxTop" type="ColorRect" parent="HUD Borders"]
+offset_left = 937.0
+offset_top = 520.0
+offset_right = 957.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="DividerTopBoxLeft" type="ColorRect" parent="HUD Borders"]
+offset_left = 937.0
+offset_top = 520.0
+offset_right = 939.0
+offset_bottom = 577.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="DividerTopBoxBottom" type="ColorRect" parent="HUD Borders"]
+offset_left = 937.0
+offset_top = 577.0
+offset_right = 957.0
+offset_bottom = 579.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="DividerBottomBoxTop" type="ColorRect" parent="HUD Borders"]
+offset_left = 937.0
+offset_top = 579.0
+offset_right = 957.0
+offset_bottom = 581.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="DividerBottomBoxLeft" type="ColorRect" parent="HUD Borders"]
+offset_left = 937.0
+offset_top = 579.0
+offset_right = 939.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="Divider2" type="ColorRect" parent="HUD Borders"]
+offset_left = 935.0
+offset_top = 520.0
+offset_right = 937.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="AmmoTopBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 798.0
+offset_top = 520.0
+offset_right = 934.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="AmmoLeftBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 798.0
+offset_top = 520.0
+offset_right = 800.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="AmmoTopShine" type="ColorRect" parent="HUD Borders"]
+offset_left = 798.0
+offset_top = 520.0
+offset_right = 821.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="AmmoTopShine2" type="ColorRect" parent="HUD Borders"]
+offset_left = 798.0
+offset_top = 520.0
+offset_right = 800.0
+offset_bottom = 537.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="Divider3" type="ColorRect" parent="HUD Borders"]
+offset_left = 796.0
+offset_top = 520.0
+offset_right = 798.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="Divider4" type="ColorRect" parent="HUD Borders"]
+offset_left = 631.0
+offset_top = 520.0
+offset_right = 633.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="HealthTopBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 636.0
+offset_top = 520.0
+offset_right = 798.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="HealthLeftBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 633.0
+offset_top = 520.0
+offset_right = 635.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="HealthTopShine" type="ColorRect" parent="HUD Borders"]
+offset_left = 633.0
+offset_top = 520.0
+offset_right = 639.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="HealthLeftShine" type="ColorRect" parent="HUD Borders"]
+offset_left = 633.0
+offset_top = 520.0
+offset_right = 635.0
+offset_bottom = 537.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="HeadTopBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 520.0
+offset_top = 520.0
+offset_right = 631.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="HeadTopShine" type="ColorRect" parent="HUD Borders"]
+offset_left = 518.0
+offset_top = 520.0
+offset_right = 524.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="HeadLeftBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 517.0
+offset_top = 520.0
+offset_right = 519.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="HeadLeftShine" type="ColorRect" parent="HUD Borders"]
+offset_left = 517.0
+offset_top = 520.0
+offset_right = 519.0
+offset_bottom = 537.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="Divider5" type="ColorRect" parent="HUD Borders"]
+offset_left = 515.0
+offset_top = 520.0
+offset_right = 517.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="LivesTopBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 393.0
+offset_top = 520.0
+offset_right = 515.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="LivesLeftBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 391.0
+offset_top = 520.0
+offset_right = 393.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="LivesTopShine2" type="ColorRect" parent="HUD Borders"]
+offset_left = 392.0
+offset_top = 520.0
+offset_right = 403.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="LivesLeftShine2" type="ColorRect" parent="HUD Borders"]
+offset_left = 391.0
+offset_top = 520.0
+offset_right = 393.0
+offset_bottom = 533.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="Divider6" type="ColorRect" parent="HUD Borders"]
+offset_left = 389.0
+offset_top = 520.0
+offset_right = 391.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="ScoreTopBorder2" type="ColorRect" parent="HUD Borders"]
+offset_left = 183.0
+offset_top = 520.0
+offset_right = 389.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="ScoreTopShine3" type="ColorRect" parent="HUD Borders"]
+offset_left = 182.0
+offset_top = 520.0
+offset_right = 215.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="ScoreLeftBorder2" type="ColorRect" parent="HUD Borders"]
+offset_left = 180.0
+offset_top = 520.0
+offset_right = 182.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="ScoreLeftShine3" type="ColorRect" parent="HUD Borders"]
+offset_left = 180.0
+offset_top = 520.0
+offset_right = 182.0
+offset_bottom = 533.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="Divider7" type="ColorRect" parent="HUD Borders"]
+offset_left = 389.0
+offset_top = 520.0
+offset_right = 391.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="Divider8" type="ColorRect" parent="HUD Borders"]
+offset_left = 178.0
+offset_top = 520.0
+offset_right = 180.0
+offset_bottom = 636.0
+color = Color(0, 0.0235294, 0.447059, 1)
+
+[node name="FloorTopBorder3" type="ColorRect" parent="HUD Borders"]
+offset_left = 14.0
+offset_top = 520.0
+offset_right = 220.0
+offset_bottom = 522.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="FloorTopShine4" type="ColorRect" parent="HUD Borders"]
+offset_left = 13.0
+offset_top = 520.0
+offset_right = 21.0
+offset_bottom = 522.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="FloorLeftBorder3" type="ColorRect" parent="HUD Borders"]
+offset_left = 12.0
+offset_top = 520.0
+offset_right = 14.0
+offset_bottom = 636.0
+color = Color(0.352941, 0.411765, 1, 1)
+
+[node name="FloorLeftShine4" type="ColorRect" parent="HUD Borders"]
+offset_left = 12.0
+offset_top = 520.0
+offset_right = 14.0
+offset_bottom = 533.0
+color = Color(0.478431, 0.533333, 1, 1)
+
+[node name="BottomBorder" type="ColorRect" parent="HUD Borders"]
+offset_left = 10.0
+offset_top = 636.0
+offset_right = 1142.0
+offset_bottom = 638.0
+color = Color(0, 0.0117647, 0.254902, 1)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dw628doptuwhs"]
 
-[ext_resource type="Script" path="res://guard.gd" id="1_17n56"]
+[ext_resource type="Script" uid="uid://cdq8pupq8p6ym" path="res://guard.gd" id="1_17n56"]
 [ext_resource type="Texture2D" uid="uid://d2vvkeu6ndpu" path="res://assets/guard.png" id="1_bd6mu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fb05l"]

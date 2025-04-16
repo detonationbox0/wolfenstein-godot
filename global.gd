@@ -2,6 +2,7 @@ extends Node
 
 var gun_ammo = 100
 var current_weapon = "minigun"
+var lives = 3
 
 
 # Called when the node enters the scene tree for the first time.

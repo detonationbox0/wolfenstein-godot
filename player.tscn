@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://ddwshjg1sgvht"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_2lxis"]
+[ext_resource type="Script" uid="uid://dhtjavv6cikl3" path="res://player.gd" id="1_2lxis"]
 [ext_resource type="Texture2D" uid="uid://bp8gbbe8hd2qu" path="res://assets/wolfweapons.png" id="2_rkfbs"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_fe12o"]
@@ -189,5 +189,7 @@ scale = Vector2(5, 5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSpriteControl"]
 sprite_frames = SubResource("SpriteFrames_0a665")
-animation = &"minigun_idle"
+animation = &"minigun_shoot"
 autoplay = "knife_idle"
+frame = 2
+frame_progress = 1.0

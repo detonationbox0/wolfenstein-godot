@@ -36,6 +36,7 @@ func _process(delta: float) -> void:
 		else:
 			$AnimatedSpriteControl/AnimatedSprite2D.play(Global.current_weapon + "_shoot")
 		
+		# Reset cool down
 		time_since_last_shot = 0
 		
 		if Global.current_weapon != "knife":
@@ -92,7 +93,11 @@ func shoot() -> void:
 		ray.get_collider().die()
 		
 func damage() -> void:
-	print("DAMAGED!", player_health)
 	player_health -= 10
 	if player_health <= 0:
-		queue_free()
+		if Global.lives <= 1:
+			queue_free()
+		else:
+			Global.lives -= 1
+			# Restart game, minus one life
+			get_tree().change_scene_to_file("res://world.tscn")

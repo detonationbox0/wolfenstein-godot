@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxpckl87dfkcp"]
+
+[ext_resource type="Script" uid="uid://cmtydmu53y1kw" path="res://health.gd" id="1_bydfv"]
+[ext_resource type="Texture2D" uid="uid://d37e6joq1pju2" path="res://assets/medpack.png" id="2_7e838"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m5lkp"]
+radius = 0.605095
+height = 1.36691
+
+[node name="Health" type="Area3D"]
+script = ExtResource("1_bydfv")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.645775, 0)
+billboard = 2
+texture = ExtResource("2_7e838")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0500628, 0.726774, 0)
+shape = SubResource("CapsuleShape3D_m5lkp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
