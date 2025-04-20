@@ -14,6 +14,7 @@ func _process(_delta: float) -> void:
 	update_player_health()
 	update_player_ammo()
 	update_player_lives()
+	update_player_floor()
 	if player != null:
 		update_face_animation(player.player_health)
 	else:
@@ -40,11 +41,20 @@ func update_player_lives():
 	if player == null:
 		# Player is dead, hide stuff
 		$lives.text = ""
-		$lives_label.text= ""
+		$lives_label.text = ""
 		return
 	
 	# Update the player's lives
 	$lives.text = str(Global.lives)
+	
+func update_player_floor():
+	if player == null:
+		# Player is dead, hide stuff
+		$floor.text = ""
+		$floor_label.text= ""
+		return
+	# Update the player's floor
+	$floor.text = str(Global.current_floor)
 	
 func update_face_animation(health):
 	var animation_name = ""

@@ -9,6 +9,9 @@ var time_since_last_shot = 0.0
 var fire_rate = 1.0
 var can_shoot = true
 
+var current_door = null
+var inside_door_area = false
+
 @onready var ray = $Camera3D/RayCast3D
 
 var player_health = 100
@@ -59,6 +62,14 @@ func _process(delta: float) -> void:
 				fire_rate = 1.0
 
 		shoot()
+	
+	# When the user presses ctrl, try to access something
+	if Input.is_action_pressed("ctrl_press") and inside_door_area:
+		if current_door.is_open == false:
+			print("OPEN THE DOOR!")
+			current_door.toggleDoor()
+		
+		
 
 func _physics_process(delta: float) -> void:
 
